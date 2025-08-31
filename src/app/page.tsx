@@ -16,13 +16,12 @@ interface TodoProps {
 
 export default async function Home() {
   const [todos, setTodos] = useState<TodoProps[]>([]);
-
+  const fetchData = async () => {
+    const todos = await getTodos();
+    setTodos(todos);
+  };
+  
   useEffect(() => {
-    const fetchData = async () => {
-      const todos = await getTodos();
-      setTodos(todos);
-    };
-
     fetchData();
   }, []);
 
