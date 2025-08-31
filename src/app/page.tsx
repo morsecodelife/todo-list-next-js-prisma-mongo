@@ -4,6 +4,13 @@ import TodoBlank from "@/components/todo/TodoBlank";
 import { prisma } from "@/utils/prisma";
 import { ListTodo } from "lucide-react";
 
+interface TodoProps {
+  id: string;
+  title: string;
+  completed: boolean;
+  createdAt: Date | null;
+}
+
 async function getTodos() {
   const data = await prisma.todo.findMany({
     select: {
@@ -39,13 +46,13 @@ export default async function Home() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-4 md:px-0">
         {/* Todo items will be mapped here */}
         {data.length === 0 && <TodoBlank />}
-        {data.map((todo, index) => (
+        {data.map((todo: TodoProps, index) => (
           <Todo
             key={index}
             todoId={todo.id}
             title={todo.title}
             completed={todo.completed}
-            createdAt={todo.createdAt}
+            createdAt={todo.createdAt as Date}
           />
         ))}
       </div>
