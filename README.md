@@ -25,7 +25,7 @@
 
 ## Preview
 
-![Preview Screenshot](./preview.png)
+![Preview Screenshot](./public/preview.png)
 
 ---
 
