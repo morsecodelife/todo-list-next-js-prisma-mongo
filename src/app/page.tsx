@@ -1,11 +1,9 @@
-export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
-
 import AddToDo from "@/components/todo/AddToDo";
 import Todo from "@/components/todo/Todo";
 import TodoBlank from "@/components/todo/TodoBlank";
-import { prisma } from "@/utils/prisma";
 import { ListTodo } from "lucide-react";
+import { useEffect, useState } from "react";
+import { getTodos } from "./actions";
 
 interface TodoProps {
   id: string;
@@ -14,24 +12,18 @@ interface TodoProps {
   createdAt: Date | null;
 }
 
-async function getTodos() {
-  const data = await prisma.todo.findMany({
-    select: {
-      id: true,
-      title: true,
-      completed: true,
-      createdAt: true,
-    },
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-
-  return data;
-}
-
 export default async function Home() {
-  const data = await getTodos();
+  const [todos, setTodos] = useState<TodoProps[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const todos = await getTodos();
+      setTodos(todos);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <main className="container mx-auto relative h-screen">
       <header className="flex flex-col justify-center items-center p-4  space-y-3">
@@ -48,8 +40,8 @@ export default async function Home() {
       {/* Map Todo */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-4 md:px-0">
         {/* Todo items will be mapped here */}
-        {data.length === 0 && <TodoBlank />}
-        {data.map((todo: TodoProps, index: number) => (
+        {todos.length === 0 && <TodoBlank />}
+        {todos.map((todo: TodoProps, index: number) => (
           <Todo
             key={index}
             todoId={todo.id}
