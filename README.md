@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# To-Do List Next.js with Prisma + MongoDB
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
+[![Prisma](https://img.shields.io/badge/Prisma-ORM-blue?logo=prisma)](https://www.prisma.io/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)](https://www.mongodb.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+โปรเจกต์นี้เป็น **To-Do List ง่าย ๆ** ที่สร้างขึ้นเพื่อเป็นแนวทางสำหรับผู้ที่ต้องการเรียนรู้การพัฒนา Web Application แบบ Full-Stack
+โดยใช้ **Next.js** (App Router), **Prisma ORM**, และ **MongoDB**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+เหมาะสำหรับผู้เริ่มต้นที่อยากเข้าใจการทำงานของ **Frontend + Backend + Database** ภายในโปรเจกต์เดียว
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- เพิ่มงานใหม่ (Add Task)
+- แก้ไขสถานะงาน (Mark as Completed / Incomplete)
+- ลบงาน (Remove Task)
+- บันทึกข้อมูลลง MongoDB ผ่าน Prisma
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Preview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Preview Screenshot](./preview.png)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How to install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. clone repo นี้
+
+   ```bash
+   git clone https://github.com/morsecodelife/todo-list-next-js-prisma-mongo.git
+   cd todo-list-next-js-prisma-mongo
+   ```
+
+2. install dependencies
+
+   ```bash
+   pnpm install
+   # หรือ
+   npm install
+   ```
+
+3. ตั้งค่าไฟล์ `.env`
+
+   ```env
+   DATABASE_URL="mongodb+srv://<username>:<password>@cluster0.mongodb.net/todo"
+   ```
+
+4. รัน Prisma migrate
+
+   ```bash
+   npx prisma generate
+   npx prisma db push
+   ```
+
+5. รันเซิร์ฟเวอร์
+   ```bash
+   pnpm dev
+   # หรือ
+   npm run dev
+   ```
+
+---
+
+## Tech Stack
+
+- [Next.js 15](https://nextjs.org/) — React Framework สำหรับ Full-Stack Web
+- [Prisma](https://www.prisma.io/) — ORM เชื่อมต่อกับฐานข้อมูล
+- [MongoDB](https://www.mongodb.com/) — ฐานข้อมูล NoSQL
+
+---
+
+## License
+
+[MIT License](./LICENSE)
+
+Note: This repository is about Next.js To-Do App with MongoDB and Prisma ORM
+Keywords: Next.js To-Do App, Next.js MongoDB Example, Prisma MongoDB, Next.js CRUD Example
