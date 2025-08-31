@@ -14,14 +14,14 @@ interface TodoProps {
   createdAt: Date | null;
 }
 
-export default async function Home() {
+export default function Home() {
   const [todos, setTodos] = useState<TodoProps[]>([]);
-  const fetchData = async () => {
-    const todos = await getTodos();
-    setTodos(todos);
-  };
-  
+
   useEffect(() => {
+    const fetchData = async () => {
+      const todos = await getTodos();
+      setTodos(todos);
+    };
     fetchData();
   }, []);
 
