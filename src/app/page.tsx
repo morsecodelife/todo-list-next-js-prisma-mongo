@@ -46,7 +46,7 @@ export default async function Home() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-4 md:px-0">
         {/* Todo items will be mapped here */}
         {data.length === 0 && <TodoBlank />}
-        {data.map((todo: TodoProps, index) => (
+        {data.map((todo: TodoProps, index: number) => (
           <Todo
             key={index}
             todoId={todo.id}
