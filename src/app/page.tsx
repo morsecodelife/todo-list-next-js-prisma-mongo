@@ -1,3 +1,5 @@
+"use client";
+
 import AddToDo from "@/components/todo/AddToDo";
 import Todo from "@/components/todo/Todo";
 import TodoBlank from "@/components/todo/TodoBlank";
