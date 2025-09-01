@@ -27,6 +27,8 @@
 
 ![Preview Screenshot](./public/preview.png)
 
+[Live demo](https://todo-list-next-js-prisma-mongo.vercel.app/)
+
 ---
 
 ## How to install
