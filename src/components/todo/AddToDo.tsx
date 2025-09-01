@@ -17,7 +17,6 @@ const AddToDo = ({ className }: AddTodoProps) => {
           placeholder="What will you do today?"
           autoComplete="off"
         />
-        {/* <Button type="submit" text={<Plus />} variant="default" /> */}
       </div>
     </Form>
   );
