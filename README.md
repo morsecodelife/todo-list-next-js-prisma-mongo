@@ -27,11 +27,11 @@
 
 ### Desktop
 
-![Preview Screenshot](./public/preview.png)
+<img src="./public/preview.png" alt="Preview Screenshot" width="600" />
 
 ### Mobile
 
-![Preview Screenshot](./public/preview-mobile.png)
+<img src="./public/preview-mobile.png" alt="Preview Screenshot" width="300" />
 
 [Live demo](https://todo-list-next-js-prisma-mongo.vercel.app/)
 
