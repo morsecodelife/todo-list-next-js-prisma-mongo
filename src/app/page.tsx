@@ -30,7 +30,7 @@ export default async function Home() {
              max-w-5xl mx-auto w-full px-4"
       />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-4 md:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-4 md:px-0">
         {todos.length === 0 && <TodoBlank />}
         {todos.map((todo) => (
           <Todo
