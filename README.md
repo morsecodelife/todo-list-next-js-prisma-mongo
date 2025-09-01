@@ -25,7 +25,13 @@
 
 ## Preview
 
+### Desktop
+
 ![Preview Screenshot](./public/preview.png)
+
+### Mobile
+
+![Preview Screenshot](./public/preview-mobile.png)
 
 [Live demo](https://todo-list-next-js-prisma-mongo.vercel.app/)
 
