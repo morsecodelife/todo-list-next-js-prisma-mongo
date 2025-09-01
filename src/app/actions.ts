@@ -3,22 +3,6 @@
 import { prisma } from "@/utils/prisma";
 import { revalidatePath } from "next/cache";
 
-export async function getTodos() {
-  const data = await prisma.todo.findMany({
-    select: {
-      id: true,
-      title: true,
-      completed: true,
-      createdAt: true,
-    },
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-
-  return data;
-}
-
 export async function createTodo(formData: FormData) {
   const todo = formData.get("todo");
 
