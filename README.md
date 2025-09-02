@@ -27,15 +27,21 @@
 
 ### Desktop
 
-<img src="/public/preview/preview-desktop.png" alt="Desktop Preview Screenshot" width="400" style="display: block; margin: 0 auto;" />
+<p align="center">
+  <img src="/public/preview/preview-desktop.png" alt="Desktop Preview Screenshot" width="100%" />
+</p>
 
 ### Tablets
 
-<img src="/public/preview/preview-tablets.png" alt="Tablets Preview Screenshot" width="400" style="display: block; margin: 0 auto;" />
+<p align="center">
+  <img src="/public/preview/preview-tablets.png" alt="Tablets Preview Screenshot" width="80%" />
+</p>
 
 ### Mobile
 
-<img src="/public/preview/preview-mobile.png" alt="Mobile Preview Screenshot" width="400" style="display: block; margin: 0 auto;" />
+<p align="center">
+  <img src="/public/preview/preview-mobile.png" alt="Mobile Preview Screenshot" width="50%" />
+</p>
 
 <a href="https://todo-list-next-js-prisma-mongo.vercel.app/" target="_blank" rel="noopener noreferrer">🌐 Live demo</a>
 
