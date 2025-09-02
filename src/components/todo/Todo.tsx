@@ -22,7 +22,7 @@ const Todo = ({ todoId, title, completed, createdAt }: TodoProps) => {
         completed
           ? "bg-neutral-200 border-gray-400 opacity-45"
           : "bg-white border-gray-50 hover:-translate-y-1.5 hover:shadow-md transition-all duration-200 ease-in-out"
-      } border p-4 rounded-lg shadow-sm flex flex-col"`}
+      } border p-4 rounded-2xl shadow-sm flex flex-col"`}
     >
       <div className="w-full">
         <div className="flex items-start gap-4">

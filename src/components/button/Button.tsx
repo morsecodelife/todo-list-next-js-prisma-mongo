@@ -6,6 +6,8 @@ interface ButtonProps {
   text: string | ReactNode;
   onClick?: () => void;
   variant?: "default" | "outline" | "link" | "ghost" | "destructive";
+  className?: string;
+  disabled?: boolean;
 }
 
 const Button = ({
@@ -13,12 +15,14 @@ const Button = ({
   text,
   onClick,
   variant = "default",
+  disabled,
   ...props
 }: ButtonProps) => {
   return (
     <button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       {...props}
       className={clsx(
         "rounded-lg font-semibold transition-colors focus:ring-2 cursor-pointer",
