@@ -93,5 +93,5 @@
 
 [MIT License](./LICENSE)
 
-Note: This repository is about Next.js To-Do App with MongoDB and Prisma ORM
-Keywords: Next.js To-Do App, Next.js MongoDB Example, Prisma MongoDB, Next.js CRUD Example
+📝 Note: This repository is about Next.js To-Do App with MongoDB and Prisma ORM
+🗝️ Keywords: Next.js To-Do App, Next.js MongoDB Example, Prisma MongoDB, Next.js CRUD Example
