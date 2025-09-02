@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Nunito } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,8 +12,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "Next.js To-Do App with Prisma & MongoDB | morsecodelife",
+  title: "TO-DO | morsecodelife",
   description:
     "ตัวอย่างโปรเจกต์ To-Do List App พัฒนาโดย Next.js 15 + Prisma ORM + MongoDB สำหรับเรียนรู้การสร้าง Full-Stack Web Application พร้อม CRUD ฟังก์ชัน.",
   keywords: [
@@ -62,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="th">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} antialiased`}
       >
         {children}
       </body>

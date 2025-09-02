@@ -11,11 +11,11 @@ export default async function Home() {
   });
 
   return (
-    <main className="container mx-auto relative h-screen">
+    <main className="container mx-auto relative h-screen font-nunito">
       <header className="flex flex-col justify-center items-center p-4 space-y-3 sticky top-0 bg-white/15 z-10 backdrop-blur-xl">
         <div className="flex items-center gap-2">
           <ListTodo className="h-10 w-10" />
-          <h1 className="font-bold text-4xl">To Do List </h1>
+          <h1 className="font-bold text-4xl">TO-DO</h1>
         </div>
         <div className="flex items-center gap-2">
           <p className="text-lg">
