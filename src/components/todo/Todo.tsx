@@ -24,30 +24,30 @@ const Todo = ({ todoId, title, completed, createdAt }: TodoProps) => {
           : "bg-white border-gray-50 hover:-translate-y-1.5 hover:shadow-md transition-all duration-200 ease-in-out"
       } border p-4 rounded-lg shadow-sm flex flex-col"`}
     >
-      {/* เนื้อหาด้านบน */}
-      <div className="flex items-start gap-4">
-        <div className="flex-1 min-w-0 flex items-center gap-2">
-          <div className="shrink-0">
-            <ToggleTodo completed={completed} todoId={todoId} />
-          </div>
+      <div className="w-full">
+        <div className="flex items-start gap-4">
+          <div className="flex-1 min-w-0 flex items-center gap-2">
+            <div className="shrink-0">
+              <ToggleTodo completed={completed} todoId={todoId} />
+            </div>
 
-          <p
-            className={`${completed ? "line-through italic" : ""}
+            <p
+              className={`${completed ? "line-through italic" : ""}
                   flex-1 min-w-0 max-w-full
                   whitespace-normal break-words pl-4`}
-          >
-            {title}
-          </p>
+            >
+              {title}
+            </p>
+          </div>
+
+          <div className={`${completed ? "hidden" : ""} shrink-0`}>
+            <RemoveTodo todoId={todoId} />
+          </div>
         </div>
 
-        <div className={`${completed ? "hidden" : ""} shrink-0`}>
-          <RemoveTodo todoId={todoId} />
+        <div className="text-xs text-right text-gray-500 mt-2">
+          {relativeTime}
         </div>
-      </div>
-
-      {/* relativeTime ชิดล่างเสมอ */}
-      <div className="text-xs text-right text-gray-500 mt-auto">
-        {relativeTime}
       </div>
     </div>
   );
