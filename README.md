@@ -31,15 +31,10 @@
   <img src="/public/preview/preview-desktop.png" alt="Desktop Preview Screenshot" width="100%" />
 </p>
 
-### Tablets
+### Devices
 
 <p align="center">
-  <img src="/public/preview/preview-tablets.png" alt="Tablets Preview Screenshot" width="50%" />
-</p>
-
-### Mobile
-
-<p align="center">
+  <img src="/public/preview/preview-tablets.png" alt="Tablets Preview Screenshot" width="40%" />
   <img src="/public/preview/preview-mobile.png" alt="Mobile Preview Screenshot" width="20%" />
 </p>
 
