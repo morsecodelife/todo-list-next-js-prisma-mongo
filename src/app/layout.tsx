@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Next.js To-Do App with Prisma & MongoDB",
     description:
       "แอป To-Do List ตัวอย่างที่ใช้ Next.js + Prisma ORM + MongoDB สำหรับเรียนรู้ Full-Stack Development",
-    url: "https://todo-list-next-js-prisma-mongo.vercel.app/",
+    url: "https://morsecodelife-todo.vercel.app",
     siteName: "Next.js To-Do App",
     images: [
       {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       "ตัวอย่าง To-Do App ด้วย Next.js + Prisma + MongoDB สำหรับเรียนรู้ Full-Stack Web",
     images: ["/public/preview.png"],
   },
-  metadataBase: new URL("https://todo-list-next-js-prisma-mongo.vercel.app/"),
+  metadataBase: new URL("https://morsecodelife-todo.vercel.app"),
 };
 
 export default function RootLayout({
