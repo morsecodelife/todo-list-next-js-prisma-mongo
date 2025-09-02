@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Next.js To-Do App",
     images: [
       {
-        url: "/public/preview-desktop.png",
+        url: "/public/preview.png",
         width: 1200,
         height: 630,
         alt: "Next.js To-Do App with Prisma & MongoDB",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Next.js To-Do App with Prisma & MongoDB",
     description:
       "ตัวอย่าง To-Do App ด้วย Next.js + Prisma + MongoDB สำหรับเรียนรู้ Full-Stack Web",
-    images: ["/public/preview-desktop.png"],
+    images: ["/public/preview.png"],
   },
   metadataBase: new URL("https://todo-list-next-js-prisma-mongo.vercel.app/"),
 };
