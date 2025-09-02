@@ -1,6 +1,6 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nunito } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,7 +20,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "TO-DO | morsecodelife",
+  title: "TODO | 🔥 morsecodelife",
   description:
     "ตัวอย่างโปรเจกต์ To-Do List App พัฒนาโดย Next.js 15 + Prisma ORM + MongoDB สำหรับเรียนรู้การสร้าง Full-Stack Web Application พร้อม CRUD ฟังก์ชัน.",
   keywords: [
@@ -38,11 +38,11 @@ export const metadata: Metadata = {
     title: "Next.js To-Do App with Prisma & MongoDB",
     description:
       "แอป To-Do List ตัวอย่างที่ใช้ Next.js + Prisma ORM + MongoDB สำหรับเรียนรู้ Full-Stack Development",
-    url: "https://your-deployed-url.com",
+    url: "https://todo-list-next-js-prisma-mongo.vercel.app/",
     siteName: "Next.js To-Do App",
     images: [
       {
-        url: "/preview.png", // ใส่รูป preview ที่อยู่ใน public/
+        url: "/public/preview-desktop.png",
         width: 1200,
         height: 630,
         alt: "Next.js To-Do App with Prisma & MongoDB",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     title: "Next.js To-Do App with Prisma & MongoDB",
     description:
       "ตัวอย่าง To-Do App ด้วย Next.js + Prisma + MongoDB สำหรับเรียนรู้ Full-Stack Web",
-    images: ["/preview.png"],
+    images: ["/public/preview-desktop.png"],
   },
-  metadataBase: new URL("https://your-deployed-url.com"),
+  metadataBase: new URL("https://todo-list-next-js-prisma-mongo.vercel.app/"),
 };
 
 export default function RootLayout({
@@ -72,7 +72,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} antialiased`}
       >
         {children}
-        <Analytics/>
+        <Analytics />
       </body>
     </html>
   );
