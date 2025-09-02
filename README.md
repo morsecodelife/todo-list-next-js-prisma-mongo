@@ -28,13 +28,13 @@
 ### Desktop
 
 <p align="center">
-  <img src="/public/preview/preview-desktop.png" alt="Desktop Preview Screenshot" width="100%" />
+  <img src="/public/preview/preview-desktop.png" alt="Desktop Preview Screenshot" width="80%" />
 </p>
 
 ### Devices
 
 <p align="center">
-  <img src="/public/preview/preview-tablets.png" alt="Tablets Preview Screenshot" width="40%" />
+  <img src="/public/preview/preview-tablets.png" alt="Tablets Preview Screenshot" width="30%" />
   <img src="/public/preview/preview-mobile.png" alt="Mobile Preview Screenshot" width="20%" />
 </p>
 
