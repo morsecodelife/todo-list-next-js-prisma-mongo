@@ -20,7 +20,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "TODO | 🔥 morsecodelife",
+  title: "todo | 🔥 morsecodelife",
   description:
     "ตัวอย่างโปรเจกต์ To-Do List App พัฒนาโดย Next.js 15 + Prisma ORM + MongoDB สำหรับเรียนรู้การสร้าง Full-Stack Web Application พร้อม CRUD ฟังก์ชัน.",
   keywords: [

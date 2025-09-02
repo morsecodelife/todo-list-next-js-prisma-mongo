@@ -6,10 +6,6 @@ import { useFormStatus } from "react-dom";
 import Form from "../form/Form";
 import Input from "../input/Input";
 
-interface AddTodoProps {
-  className?: string;
-}
-
 function InputWithStatus() {
   const { pending } = useFormStatus();
 
@@ -26,21 +22,27 @@ function InputWithStatus() {
         disabled={pending}
         aria-busy={pending}
       />
-
       {pending && (
         <Loader
           className="absolute right-3 h-5 w-5 animate-spin text-gray-500"
           strokeWidth={2.5}
-          aria-label="Submitting…"
         />
       )}
     </div>
   );
 }
 
+interface AddTodoProps {
+  className?: string;
+}
+
 const AddToDo = ({ className }: AddTodoProps) => {
+  const handleSubmit = async (formData: FormData) => {
+    await createTodo(formData);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
-    <Form action={createTodo}>
+    <Form action={handleSubmit}>
       <div className={className}>
         <InputWithStatus />
       </div>

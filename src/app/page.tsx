@@ -1,9 +1,10 @@
+import logo from "@/assets/icon.png";
 import GithubIcon from "@/components/GithubIcon";
 import AddToDo from "@/components/todo/AddToDo";
 import Todo from "@/components/todo/Todo";
 import TodoBlank from "@/components/todo/TodoBlank";
 import { prisma } from "@/utils/prisma";
-import { ListTodo } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
@@ -17,13 +18,20 @@ export default async function Home() {
       <header className="flex md:flex-row justify-between items-center p-4 fixed w-full top-0 bg-white/15 z-10 backdrop-blur-xl shadow-sm">
         {/* Logo + Title */}
         <div className="flex items-center gap-2">
-          <ListTodo className="h-6 w-6 md:h-7 md:w-7 text-emerald-600" />
+          {/* <ListTodo className="h-6 w-6 md:h-7 md:w-7 text-emerald-600" /> */}
+          <Image
+            src={logo}
+            alt="Logo"
+            width={32}
+            height={32}
+            className="h-5 w-5 md:h-6 md:w-6 text-emerald-600"
+          />
           <h1
-            className="font-bold text-2xl md:text-2xl tracking-tight
-             bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-200/20
+            className="font-bold text-2xl md:text-3xl tracking-tight
+             bg-gradient-to-r from-black to-black/20
              bg-clip-text text-transparent"
           >
-            TODO
+            todo
           </h1>
         </div>
 
