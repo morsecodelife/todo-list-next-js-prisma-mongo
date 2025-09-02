@@ -38,7 +38,7 @@
   <img src="/public/preview/preview-mobile.png" alt="Mobile Preview Screenshot" width="20%" />
 </p>
 
-<a href="https://todo-list-next-js-prisma-mongo.vercel.app/" target="_blank" rel="noopener noreferrer">🌐 Live demo</a>
+<a href="https://morsecodelife-todo.vercel.app/" target="_blank" rel="noopener noreferrer">🌐 Live demo</a>
 
 ---
 
