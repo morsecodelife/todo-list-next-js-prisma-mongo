@@ -40,7 +40,7 @@ export default async function Home() {
         </Link>
       </header>
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-4 md:px-0 mt-15">
+      <div className="container pb-36 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-4 md:px-0 mt-15">
         {todos.length === 0 && <TodoBlank />}
         {todos.map((todo) => (
           <Todo
