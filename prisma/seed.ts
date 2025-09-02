@@ -26,7 +26,7 @@ async function main() {
     "Dentist appointment 🦷",
     "Prepare presentation slides 📊",
     "Practice English 📝",
-    "Update resume", // ไม่มี emoji
+    "Update resume",
     "Write a blog post ✍️",
     "Try a new recipe 🍳",
     "Check product inventory 📦",
@@ -42,18 +42,41 @@ async function main() {
     "Check Slack notifications 🔔",
     "Wash the car 🚗",
     "Prepare breakfast 🥞",
+    "Plan weekend trip 🗺️",
+    "Water the plants 🌱",
+    "Meditate for 10 minutes 🧘",
+    "Organize desk 🗄️",
+    "Backup laptop 💾",
+    "Clean inbox 📨",
+    "Review pull requests 🔍",
+    "Stretch after work 🤸",
+    "Check calendar 📅",
+    "Learn a new word 📖",
+    "Research investment options 📊",
+    "Update portfolio 🌐",
+    "Review code style guide 📘",
+    "Plan grocery budget 💰",
+    "Call a friend ☎️",
+    "Fix a bug 🐞",
+    "Prepare for meeting 📂",
+    "Check server status 🖥️",
+    "Order new headphones 🎧",
+    "Organize bookshelf 📚",
   ];
 
-  const todos = sampleTodos.map((title) => ({
+  // เวลาตั้งต้น ย้อนหลัง 50 ชั่วโมงจากตอนนี้
+  const startTime = new Date();
+  startTime.setHours(startTime.getHours() - sampleTodos.length);
+
+  const todos = sampleTodos.map((title, index) => ({
     title,
     completed: Math.random() < 0.4,
+    createdAt: new Date(startTime.getTime() + index * 60 * 60 * 1000), // บวกทีละ 1 ชั่วโมง
   }));
 
   await prisma.todo.createMany({ data: todos });
 
-  console.log(
-    "✅ Seeded 30 realistic todos (with matching emojis, some without)"
-  );
+  console.log(`✅ Seeded ${sampleTodos.length} todos with ordered createdAt`);
 }
 
 main()

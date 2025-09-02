@@ -16,7 +16,7 @@ function InputWithStatus() {
   return (
     <div className="relative flex items-center gap-2">
       <Input
-        className={`w-full rounded-full shadow-sm pr-10 transition-opacity ${
+        className={`w-full rounded-full shadow-sm pr-10 transition-opacity max-w-5xl mx-auto ${
           pending ? "opacity-50 pointer-events-none" : ""
         }`}
         type="text"
